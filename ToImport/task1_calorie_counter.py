@@ -1,3 +1,4 @@
+from Exceptions import MealTooBig
 calories = {
    'Hamburger': 600,
    'Cheese Burger': 750,
@@ -22,7 +23,13 @@ def cal_cntr(choices):
             result += calories[choice]
         elif choice in combos:
             result += cal_cntr(combos[choice])
+        else:
+            return f'''Sorry,"{choice}" isn't in the menue'''
+    if result>100:
+        raise MealTooBig(result)
     return result
+
+
 
 
 
