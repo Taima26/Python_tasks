@@ -24,15 +24,11 @@ def cal_cntr(choices):
         elif choice in combos:
             result += cal_cntr(combos[choice])
         else:
-            return f'''Sorry,"{choice}" isn't in the menue'''
+            return f'''Sorry,"{choice}" isn't on the menue'''
     if result > 2000:
         raise MealTooBig(result)
     return result
 
 
-
-
-x=[ "Veggie Combo","Veggie Combo"]
-print(cal_cntr(x))
 
 
