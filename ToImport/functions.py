@@ -1,5 +1,6 @@
-from Exceptions import MealTooBig
+from ToImport.Exceptions import MealTooBig
 import json
+
 data = json.load(open("data.json"))
 meals = data["meals"]
 combos = data["combos"]
@@ -46,3 +47,5 @@ def price_counter(order):
             return("Wrong input")
     return result
 
+print (meals_dic)
+print(combo_dic)
