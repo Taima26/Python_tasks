@@ -1,4 +1,4 @@
-from ToImport.Exceptions import MealTooBig
+from Exceptions import MealTooBig
 calories = {
    'Hamburger': 600,
    'Cheese Burger': 750,
@@ -32,6 +32,7 @@ def cal_cntr(choices):
 
 
 
-
+x=[ "Veggie Combo","Veggie Combo"]
+print(cal_cntr(x))
 
 

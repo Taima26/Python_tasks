@@ -1,4 +1,3 @@
-from ToImport.Exceptions import MealTooBig
 from Exceptions import MealTooBig
 
 import json
