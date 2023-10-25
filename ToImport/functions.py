@@ -29,7 +29,7 @@ def cal_counter(order):
             id= combo_dic[choice]
             result += cal_counter(combos[id].get("meals"))
         elif choice not in meals_dic and choice not in combo_dic:
-            raise WrongInput
+            raise WrongInput(choice)
     if result > 2000:
         raise MealTooBig(result)
     return result
@@ -44,7 +44,6 @@ def price_counter(order):
             id= combo_dic[choice]
             result += combos[id].get("price")
         elif choice not in meals_dic and choice not in combo_dic:
-            raise WrongInput
+            raise WrongInput(choice)
     return result
-
 
