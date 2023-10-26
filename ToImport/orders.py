@@ -11,8 +11,8 @@ class Order:
         Order.counter +=1
         self.order_accepted = self.is_order_accepted()
         self.order_refuse_reason = str
-        #self.calories = self.calories_property()
-        #self.price = self.price_property()
+        self.calories = self.order_calories
+        self.price = self.order_price
    
     def is_order_accepted(self):
         try:
@@ -23,12 +23,12 @@ class Order:
             return False
 
     @property   
-    def calories_property(self):
+    def order_calories(self):
         if self.order_accepted:
             return cal_counter(self.items)
             
     @property
-    def price_property(self):
+    def order_price(self):
         if self.order_accepted:
             return price_counter(self.items)
         
