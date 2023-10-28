@@ -1,4 +1,4 @@
-from Exceptions import MealTooBig
+from ToImport.Exceptions  import MealTooBig, WrongInput
 calories = {
    'Hamburger': 600,
    'Cheese Burger': 750,
@@ -24,7 +24,7 @@ def cal_cntr(choices):
         elif choice in combos:
             result += cal_cntr(combos[choice])
         else:
-            return f'''Sorry,"{choice}" isn't on the menue'''
+            raise WrongInput(choice)
     if result > 2000:
         raise MealTooBig(result)
     return result
