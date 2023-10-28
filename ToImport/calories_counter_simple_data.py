@@ -24,9 +24,9 @@ def cal_cntr(choices):
         elif choice in combos:
             result += cal_cntr(combos[choice])
         else:
-            raise WrongInput(choice)
+            return f"sorry we don't have {choice} on the menue"
     if result > 2000:
-        raise MealTooBig(result)
+        return f"your meal is too big, {result} is bigger than 2000!"
     return result
 
 
